@@ -14,7 +14,7 @@
 
 
 const p1 = new Promise(function(resolve , reject){
-    resolve('Promise Reosolved')
+    resolve('Promise Resolved')
 })
 
 // p1.then(function(result){
