@@ -1,34 +1,27 @@
-import React, { useState } from "react";
-
+import React , {useState} from "react";
 
 function Form() {
 
-    const [name , setName] = useState('')
-    const [password , setPassword] = useState('')
-    const [email , setEmail] = useState('')
+  const [name,setName] = useState('')
+  const [password,setPassword] = useState('')
+  const [email,setEmail] = useState('')
 
-    // function onNameChange(e){
-    //   setName(e.target.value)
-    // }
+  const handleSubmit = (event) => {
+    event.preventDefault();  // Prevent the page from refreshing
+    console.log({ name, email, password });
+  }
 
-    function submitForm(e){
-      e.preventDefault()
-      console.log(name)
-      console.log(email)
-      console.log(password)
-
-    }
-
+  
   return (
-    <form onSubmit={submitForm}>
+    <form>
       <label>Name :</label>
-      <input type="text" value={name} onChange={(e)=>setName(e.target.value)}  />
+      <input type="text" value={name}  onChange={(e) => setName(e.target.value)}/>
 
       <label>Email :</label>
-      <input type="email"  value={email} onChange={(e)=>setEmail(e.target.value)} />
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
       <label>password :</label>
-      <input type="password"  value={password} onChange={(e)=>setPassword(e.target.value)} />
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
 
       <button type="submit">Submit From</button>
     </form>
