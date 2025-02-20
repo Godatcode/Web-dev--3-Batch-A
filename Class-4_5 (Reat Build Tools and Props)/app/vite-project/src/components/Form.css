@@ -1,0 +1,105 @@
+/* Global styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e2a47, #313c65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #f2f2f2;
+  }
+  
+  /* Form container styling */
+  form {
+    background: rgba(28, 30, 45, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid #0f1539;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    color: #00ffcc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Input styling */
+  input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #0f1539;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  input:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.7);
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(45deg, #00ffcc, #00b3b3);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    letter-spacing: 2px;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background: linear-gradient(45deg, #00b3b3, #00ffcc);
+    transform: scale(1.05);
+  }
+  
+  /* Button active effect */
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Input & button placeholder text (if any) */
+  ::placeholder {
+    color: #888;
+    font-style: italic;
+  }
+  
+  /* Responsive form adjustments */
+  @media screen and (max-width: 480px) {
+    form {
+      width: 90%;
+      padding: 30px;
+    }
+  
+    input, button {
+      padding: 14px;
+    }
+  }
